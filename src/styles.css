@@ -1,23 +1,24 @@
 :root {
   --branding-color: #6c63ff;
   --secondary-color: #f9f7fe;
+  --accent-color: rgb(248, 8, 8);
+  --highlight-color: rgb(255, 165, 0);
   --heading-font-family: "Playfair Display", serif;
   --default-font-family: "Poppins", sans-serif;
 }
 
 body {
   font-family: var(--default-font-family);
+  margin: 100px 0;
 }
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   color: black;
   font-family: var(--heading-font-family);
   font-weight: bold;
+  margin: 0;
 }
 
 h1 {
@@ -33,6 +34,10 @@ p {
   font-weight: normal;
   font-size: 16px;
   line-height: 30px;
+}
+
+nav {
+  background-color: var(--branding-color);
 }
 
 .hero {
@@ -77,7 +82,94 @@ p {
   padding: 120px 60px;
 }
 
-@media (max-width: 900px) {
+footer {
+  background-color: var(--branding-color);
+  padding: 10px 15px;
+  font-size: 17px;
+}
+.contact-page-info a {
+  color: var(--branding-color);
+}
+.contact-page-info a:hover {
+  color: var(--accent-color);
+}
+.open {
+  text-align: center;
+  font-size: 16px;
+  color: var(--main-color);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+}
+i {
+  color: var(--highlight-color);
+  padding: 20px;
+  transition: all 100ms ease-in-out;
+}
+
+i:hover {
+  color: var(--accent-color);
+}
+
+.email {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  text-decoration: none;
+  color: var(--branding-color);
+}
+.email:hover {
+  text-decoration: underline;
+}
+.about-text {
+  display: block;
+  text-align: center !important;
+  margin: 30px 0;
+  font-size: 80px;
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+.about-text p {
+  margin: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+}
+.links {
+  display: flex;
+  margin-top: 35px;
+  justify-content: center;
+}
+.links a {
+  margin-top: 40px;
+  margin-bottom: 45px;
+  border-radius: 4px;
+  padding: 20px 15px;
+  text-decoration: none;
+}
+.contact-link {
+  background-color: var(--branding-color);
+  box-shadow: var(--box-shadow);
+  color: white;
+  margin: 20px;
+}
+.about-link {
+  color: var(--branding-color);
+  border: 1px solid var(--branding-color);
+  margin: 20px;
+}
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media (max-width: 576px) {
   h1 {
     font-size: 44px;
     line-height: 2;
@@ -94,5 +186,9 @@ p {
   .project-desciption {
     padding: 0;
     text-align: center;
+  }
+  .contact-header {
+    padding-top: 60px;
+    padding-bottom: 145px;
   }
 }
